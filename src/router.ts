@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe.vue";
 import ContactPage from "./components/ContactPage.vue";
 import SkillsPage from "./components/SkillsPage.vue";
 import ProjectsPage from "./components/ProjectsPage.vue";
+import ProjectComponent from "./components/ProjectComponent.vue";
 
 const routes = [
     {
@@ -33,24 +34,13 @@ const routes = [
     {
         path: '/portfolio/projects/',
         name: 'My Projects',
-        component: ProjectsPage
-    }
+        component: ProjectsPage,
+    },
     // {
-    //     path: '/postevent',
-    //     name: 'postEvent',
-    //     component: PostEventView,
-    //     beforeEnter: (to, from, next) => {
-    //         const { user } = useAuth();
-    //         //if a user is signed in, allow them to access this route
-    //         if (user.value)
-    //         {
-    //             next();
-    //         }
-    //         //otherwise send them to the sign in page
-    //         else{
-    //             next('/signin')
-    //         }
-    //     }
+    //     path: '/portfolio/project/:project',
+    //     name: 'My Projects',
+    //     component: ProjectComponent,
+    //     props: true
     // }
 ];
 
@@ -58,5 +48,12 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 });
+
+router.addRoute("My Projects", {
+    path: ":project",
+    name: "P",
+    component: ProjectComponent,
+    props: true
+})
 
 export default router;

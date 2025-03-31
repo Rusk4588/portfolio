@@ -9,12 +9,13 @@
     My name is Morgan Rusk, and I am a 21 year old Computer Systems Technology student at Saskatchewan Polytechnic.
   </p>
 
-  <img src="../../public/images/morgan.JPG" alt="Headshot photo of Morgan Rusk">
+  <img src="/src/images/morgan.JPG" alt="Headshot photo of Morgan Rusk" class="rounded">
 </template>
 
 <style scoped>
 
 img {
   max-height: 80vh;
+  object-fit: contain;
 }
 </style>

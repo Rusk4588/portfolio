@@ -29,9 +29,9 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <RouterLink to="/portfolio/projects" class="dropdown-item" >All Projects</RouterLink>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Online Cat chat forum</a></li>
-                  <li><a class="dropdown-item" href="#">City events application</a></li>
-                  <li><a class="dropdown-item" href="#">Monster mania video game</a></li>
+                  <li><a class="dropdown-item" href="/portfolio/projects/cat">Online Cat chat forum</a></li>
+                  <li><a class="dropdown-item" href="/portfolio/projects/events">City events application</a></li>
+                  <li><a class="dropdown-item" href="/portfolio/projects/monster">Monster mania video game</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -44,24 +44,23 @@
     </div>
   </header>
 
-  <RouterView />
+  <div class="container my-2 mx-auto card p-3">
+    <RouterView />
+  </div>
+
 </template>
 
 <style>
 body, html {
-  background-color: hotpink;
+  background-color: lightseagreen;
   margin: 0;
   padding: 0;
 }
 
 #app {
-  background-color: lightpink;
+  background-color: lightgreen;
   overflow: hidden;
   min-height: 100vh;
-}
-
-header {
-  background-color: slategray;
 }
 
 @media (min-width: 1024px) {
