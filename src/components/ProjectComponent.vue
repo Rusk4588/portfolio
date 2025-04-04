@@ -1,7 +1,8 @@
 <script setup>
 
-import {useRoute, useRouter} from "vue-router";
-import {onMounted, ref} from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { onMounted, ref } from "vue";
+import {chatCat, getProject, getProjectFromURL} from "@/scripts/project.js";
 
 const props = defineProps({
   projectName: String
@@ -10,21 +11,30 @@ const props = defineProps({
 const route = useRoute();
 const router = useRouter();
 
-let a = route.params.project
-const project = ref("");
-
-console.log("HERE")
+const project = ref(chatCat);
 
 onMounted(() => {
+  // Check if props have been given:
   if (props.projectName === undefined || props.projectName === "") {
+
+    // Check if there is something in the query
     if (route.params.project) {
-      project.value = route.params.project.toString();
+      const query = route.params.project.toString();
+
+      project.value = getProjectFromURL(query);
+
+      if (project.value === null)
+      {
+        router.push("/portfolio/projects");
+      }
+
     } else {
-      console.log("ahh?")
-      //router.push("/projects");
+      // Nothing has been queried, push to default which sets up props
+      router.push("/portfolio/projects");
     }
   } else {
-    project.value = props.projectName;
+    // We've got props given!
+    project.value = getProject(props.projectName);
   }
 })
 
@@ -32,7 +42,18 @@ onMounted(() => {
 
 <template>
 
-  <h3>{{ project }}</h3>
+  <div class="card bg-body-secondary p-3 my-3">
+    <h3 class="projectName">{{ project.name }}</h3>
+
+    <p class="description">{{ project.description }}</p>
+
+    <p v-if="project.link !== ''">
+      Play the game here: <a :href="project.link">{{ project.name }}</a>
+    </p>
+
+<!--    <iframe v-if="project.link !== ''" :src="project.link" ></iframe>-->
+  </div>
+
 
 </template>
 

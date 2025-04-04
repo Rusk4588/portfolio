@@ -2,19 +2,25 @@
 
 // https://3bulletmonstermania.itch.io/3-bullet-monster-mania
 
-import {ref} from "vue";
+import ProjectComponent from "@/components/ProjectComponent.vue";
+
+import { ref, watch } from "vue";
+import { projects } from "@/scripts/project.js";
+import { useRoute } from "vue-router";
 
 const route = useRoute();
 const all = ref(true);
-
-console.log(route.params.project);
+const allProjects = ref(projects);
 
 if (route.params.project) {
   all.value = false;
 }
 
-import ProjectComponent from "@/components/ProjectComponent.vue";
-import {useRoute} from "vue-router";
+watch(() => route.params, (param) => {
+  all.value = param.length === undefined;
+});
+
+
 </script>
 
 <template>
@@ -23,9 +29,7 @@ import {useRoute} from "vue-router";
   <RouterView v-if="!all" />
 
   <div v-if="all">
-    <ProjectComponent project-name="Monster Mania" />
-    <ProjectComponent project-name="Cat Forum" />
-    <ProjectComponent project-name="Events App" />
+    <ProjectComponent v-for="project in allProjects" :key="project.id" :project-name="project.name" />
   </div>
 </template>
 
