@@ -15,8 +15,8 @@ export interface Project {
 export const chatCat: Project = {
     id: 1,
     name: "Cat Forum",
-    description: "Chat forum to talk about cats.",
-    involvement: [ "" ],
+    description: "Chat forum to talk about cats, built for a final project in a web development class.",
+    involvement: [ "Morgan Rusk" ],
     instructions: [ "" ],
     urlParam: "cat",
     link: ""
@@ -25,8 +25,8 @@ export const chatCat: Project = {
 export const eventsApp: Project = {
     id: 1,
     name: "Events App",
-    description: "Event application made in a group project for a client.",
-    involvement: [ "" ],
+    description: "Event application made in a group project for a client. The web application is designed to give people the ability to find events happening locally.",
+    involvement: [ "Morgan Rusk", "Zac", "Chau Cao", "Kim", "Rayne", "Hayden", "Cedric" ],
     instructions: [ "" ],
     urlParam: "events",
     link: ""
@@ -34,9 +34,9 @@ export const eventsApp: Project = {
 
 export const monsterMania: Project = {
     id: 3,
-    name: "Monster Mania",
-    description: "This is a Monster Mania.",
-    involvement: [ "" ],
+    name: "4-Bullet Monster Mania",
+    description: "This is a Monster Mania, a game made for the Saskatoon Game Jam held in September of 2024.",
+    involvement: [ "Morgan Rusk", "Andrea", "Gia", "Zac" ],
     instructions: [ "" ],
     urlParam: "monster",
     link: "https://3bulletmonstermania.itch.io/3-bullet-monster-mania"

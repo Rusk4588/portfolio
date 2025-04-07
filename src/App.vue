@@ -7,7 +7,7 @@
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navigation</a>
+          <a class="navbar-brand" href="#">Portfolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,7 +26,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Projects
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                   <RouterLink to="/portfolio/projects" class="dropdown-item" >All Projects</RouterLink>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/portfolio/projects/cat">Online Cat chat forum</a></li>
@@ -44,7 +44,7 @@
     </div>
   </header>
 
-  <div class="container my-2 mx-auto card p-3">
+  <div class="container my-4 mx-sm-auto card p-3">
     <RouterView />
   </div>
 
@@ -63,7 +63,9 @@ body, html {
   min-height: 100vh;
 }
 
-@media (min-width: 1024px) {
-
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
 }
 </style>

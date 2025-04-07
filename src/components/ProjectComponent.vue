@@ -48,7 +48,7 @@ onMounted(() => {
     <p class="description">{{ project.description }}</p>
 
     <p v-if="project.link !== ''">
-      Play the game here: <a :href="project.link">{{ project.name }}</a>
+      See the project here: <a :href="project.link" target="_blank" >{{ project.name }}</a>
     </p>
 
 <!--    <iframe v-if="project.link !== ''" :src="project.link" ></iframe>-->
