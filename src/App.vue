@@ -52,13 +52,13 @@
 
 <style>
 body, html {
-  background-color: lightseagreen;
+  background-color: lightgreen;
   margin: 0;
   padding: 0;
 }
 
 #app {
-  background-color: lightgreen;
+  background-color: rgb(127, 232, 85);
   overflow: hidden;
   min-height: 100vh;
 }

@@ -2,7 +2,8 @@
 
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
-import {chatCat, getProject, getProjectFromURL} from "@/scripts/project.js";
+import { chatCat, getProject, getProjectFromURL } from "@/scripts/project.js";
+import DescriptionComponent from "@/components/DescriptionComponent.vue";
 
 const props = defineProps({
   projectName: String
@@ -38,34 +39,31 @@ onMounted(() => {
   }
 })
 
-/*
-  Project name
-
-  description
-
-  // (instructions.count >= images.count)
-  for # in instructions
-    instructions[#]
-    if images[#]
-      image
-  
-  link
-
- */
 </script>
 
 <template>
 
   <div class="card bg-body-secondary p-3 my-3">
-    <h3 class="projectName">{{ project.name }}</h3>
+
+    <h3 class="projectName card-title">{{ project.name }}</h3>
+
+    <div class="card-header bg-transparent small p-0 mb-2">
+      By: <span v-for="(value, index) in project.involvement"><span v-if="index !== 0">, </span>{{ value }}</span>
+    </div>
 
     <p class="description">{{ project.description }}</p>
+
+    <div class="d-flex flex-column">
+      <div v-for="(value, index) in project.instructions" :key="index">
+        <DescriptionComponent :text="value" :image="project.images[index]" />
+      </div>
+    </div>
+
 
     <p v-if="project.link !== ''">
       See the project here: <a :href="project.link" target="_blank" >{{ project.name }}</a>
     </p>
   </div>
-
 
 </template>
 

@@ -15,7 +15,7 @@ const props = defineProps({
 
   <div class="d-md-flex d-block flex-row justify-content-between align-items-start">
 
-    <div class="col-12 col-md-6 p-3">
+    <div class="col-12 col-md-6 col-lg-7 p-3">
       <div id="me">
         <p>
           My name is Morgan Rusk, and I am a 21 year old Computer Systems Technology student at Saskatchewan Polytechnic.
@@ -38,9 +38,6 @@ const props = defineProps({
 
         <p>
           Born and raised in Saskatoon, Saskatchewan, I am a proud member of the Mistawasis Nêhiyawak (ᒥᐢᑕᐚᓯᐢ ᓀᐦᐃᔭᐘᐠ) First Nations band.
-        </p>
-
-        <p>
           I've got an older sister, and two younger step-siblings, as well as five cats.
           <a v-if="showCats" href="#cats">Please look at my cats.</a>
         </p>
@@ -52,14 +49,14 @@ const props = defineProps({
 
         <ul>
           <li>My birthday is on October 31st!</li>
-          <li>Another fact!</li>
-          <li>One more!</li>
+          <li>My favourite colour is #7fe855 green (look at the background!)</li>
+          <li>One more fact!</li>
         </ul>
       </div>
 
     </div>
 
-    <figure class="d-flex flex-column figure">
+    <figure class="d-flex flex-column figure mt-md-3">
       <img src="/src/images/morgan.JPG" alt="Headshot photo of Morgan Rusk" class="rounded w-75 mx-auto align-content-center figure-img">
       <figcaption class="figure-caption mx-auto">Morgan Rusk</figcaption>
     </figure>
