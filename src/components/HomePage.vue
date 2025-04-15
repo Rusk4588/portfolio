@@ -1,13 +1,25 @@
 <script setup>
 
+import AboutMe from "@/components/AboutMe.vue";
+import SkillsPage from "@/components/SkillsPage.vue";
+import ProjectsPage from "@/components/ProjectsPage.vue";
+import ContactPage from "@/components/ContactPage.vue";
 </script>
 
 <template>
-  <h1>Portfolio</h1>
+  <AboutMe :show-cats="false" />
 
-  <p>
-    Welcome!
-  </p>
+  <hr />
+
+  <SkillsPage />
+
+  <hr />
+
+  <ProjectsPage />
+
+  <hr />
+
+  <ContactPage />
 
 </template>
 

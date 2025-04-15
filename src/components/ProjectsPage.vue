@@ -24,13 +24,16 @@ watch(() => route.params, (param) => {
 </script>
 
 <template>
-  <h1>Projects</h1>
+  <h1 class="text-center">Projects</h1>
 
-  <RouterView v-if="!all" />
+  <div class="px-3">
+    <RouterView v-if="!all" />
 
-  <div v-if="all">
-    <ProjectComponent v-for="project in allProjects" :key="project.id" :project-name="project.name" />
+    <div v-if="all">
+      <ProjectComponent v-for="project in allProjects" :key="project.id" :project-name="project.name" />
+    </div>
   </div>
+
 </template>
 
 <style scoped>

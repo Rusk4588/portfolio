@@ -8,6 +8,7 @@ export interface Project {
     instructions: string[];
     urlParam: string;
     link: string;
+    images: string[]
 }
 
 
@@ -19,7 +20,8 @@ export const chatCat: Project = {
     involvement: [ "Morgan Rusk" ],
     instructions: [ "" ],
     urlParam: "cat",
-    link: ""
+    link: "",
+    images: []
 };
 
 export const eventsApp: Project = {
@@ -29,7 +31,8 @@ export const eventsApp: Project = {
     involvement: [ "Morgan Rusk", "Zac", "Chau Cao", "Kim", "Rayne", "Hayden", "Cedric" ],
     instructions: [ "" ],
     urlParam: "events",
-    link: ""
+    link: "",
+    images: []
 };
 
 export const monsterMania: Project = {
@@ -39,7 +42,8 @@ export const monsterMania: Project = {
     involvement: [ "Morgan Rusk", "Andrea", "Gia", "Zac" ],
     instructions: [ "" ],
     urlParam: "monster",
-    link: "https://3bulletmonstermania.itch.io/3-bullet-monster-mania"
+    link: "https://3bulletmonstermania.itch.io/3-bullet-monster-mania",
+    images: []
 };
 
 // Exporting all projects

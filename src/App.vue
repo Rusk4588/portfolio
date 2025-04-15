@@ -5,7 +5,7 @@
 <template>
   <header>
     <div class="wrapper">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Portfolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,9 +63,9 @@ body, html {
   min-height: 100vh;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .container {
-    max-width: 90%;
+    max-width: 95%;
   }
 }
 </style>

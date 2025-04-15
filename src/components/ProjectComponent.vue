@@ -38,6 +38,20 @@ onMounted(() => {
   }
 })
 
+/*
+  Project name
+
+  description
+
+  // (instructions.count >= images.count)
+  for # in instructions
+    instructions[#]
+    if images[#]
+      image
+  
+  link
+
+ */
 </script>
 
 <template>
@@ -50,8 +64,6 @@ onMounted(() => {
     <p v-if="project.link !== ''">
       See the project here: <a :href="project.link" target="_blank" >{{ project.name }}</a>
     </p>
-
-<!--    <iframe v-if="project.link !== ''" :src="project.link" ></iframe>-->
   </div>
 
 
