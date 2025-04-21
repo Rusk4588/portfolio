@@ -1,5 +1,5 @@
 <script setup>
-
+// TODO: Update last update time on site update??
 </script>
 
 <template>
@@ -47,6 +47,16 @@
   <div class="container my-4 mx-sm-auto card p-3">
     <RouterView />
   </div>
+
+  <div class="container p-3">
+
+  </div>
+
+  <footer class="footer text-center text-white bg-dark fixed-bottom">
+    <div class="p-2 small font-monospace">
+      Site last updated: April 2025
+    </div>
+  </footer>
 
 </template>
 

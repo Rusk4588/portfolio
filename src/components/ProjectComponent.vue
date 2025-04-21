@@ -60,7 +60,7 @@ onMounted(() => {
     </div>
 
 
-    <p v-if="project.link !== ''">
+    <p v-if="project.link !== ''" class="mt-3">
       See the project here: <a :href="project.link" target="_blank" >{{ project.name }}</a>
     </p>
   </div>

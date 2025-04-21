@@ -51,24 +51,52 @@ export const chatCat: Project = {
 
 export const eventsApp: Project = {
     id: 1,
-    name: "Events App",
-    description: "Event application made in a group project for a client. The web application is designed to give people the ability to find events happening locally.",
+    name: "Motodo",
+    description: "This is an event application made in a group project for a client. The web application is designed to give people the ability to find events happening locally.",
     involvement: [ "Morgan Rusk", "Zac Linzmeyer", "Chau Cao", "Kim Jin", "Rayne Perry", "Hayden Thomson", "Cedric Losantas" ],
-    instructions: [ "" ],
+    instructions: [
+        "This is the front page of the application. Users may find events from here, or sign in and create their own events.",
+        "An event can be expanded to show more information about the event, like the event's description, any links associated with the event, and any optional images. If a user clicks on specific event information, like the location or audience type, it swill apply a filter for those types of events.",
+        "I implemented the filtering system. Upon a user clicking the 'Filter' button, a modal will pop up. In the modal, users can select different filters to apply to the search. Filters include: Categories, audience type, locations, and start and end date.",
+        "Once the filters are applied, the events are filtered and the current filter in affect is displayed to the user. Filtering works with both sorting and searching.",
+        "If a user likes another user's post, they may go to their profile page and follow them to receive notifications when they post a new event. Both the following functionality and the email notifications were designed by me.",
+        "Moderators have special functionality that is not available to other users. I created the moderator's users view, which allows moderators to see and search registered users easily.",
+        "Moderators can easily sort and search users based on their username or email.",
+        "The type of user (such as regular, premium, or moderator) is displayed to the moderator beside each user with an icon that can be hovered over for more details.",
+        "This is just some of the functionality implemented into the website, as my group members and I have worked on this project for over seven months."
+    ],
     urlParam: "events",
     link: "https://effulgent-dolphin-09ec55.netlify.app/",
-    images: []
+    images: [
+        "MotodoFrontPage.png",
+        "MotodoEvent.png",
+        "MotodoAdvancedFilters.png",
+        "MotodoAppliedFilters.png",
+        "MotodoFollowing.png",
+        "MotodoModUsers.png",
+        "MotodoModSearchUsers.png",
+        "MotodoUserType.png"
+    ]
 };
 
 export const monsterMania: Project = {
     id: 3,
     name: "4-Bullet Monster Mania",
-    description: "This is a Monster Mania, a game made for the Saskatoon Game Jam held in September of 2024.",
-    involvement: [ "Morgan Rusk", "Andrea Mareschal?", "Gia Diep", "Zac Wieler" ],
-    instructions: [ "" ],
+    description: "This is Monster Mania, a game made for the Saskatoon Game Jam held in September of 2024.",
+    involvement: [ "Morgan Rusk", "Andrea", "Gia Diep", "Zac Wieler" ],
+    instructions: [
+        "The point of 4-Bullet Monster Mania is to escape the cave you are trapped in! Blocking the exit is a large monster, but you have a gun you can use to defeat it.",
+        "By using the arrow keys and the space bar to hit the targets, you can weaken the monster.",
+        "The monster has psychic powers that can effect your aim and shooting skills, resulting in modes such as 'Drunk', 'Reverse', and more.",
+        "Artwork created by me."
+    ],
     urlParam: "monster",
     link: "https://3bulletmonstermania.itch.io/3-bullet-monster-mania",
-    images: []
+    images: [
+        "MonsterStart.png",
+        "MonsterGame.png",
+        "MonsterMode.png"
+    ]
 };
 
 // Exporting all projects

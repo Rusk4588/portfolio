@@ -2,7 +2,6 @@
 
 import AboutMe from "@/components/AboutMe.vue";
 import SkillsPage from "@/components/SkillsPage.vue";
-import ProjectsPage from "@/components/ProjectsPage.vue";
 import ContactPage from "@/components/ContactPage.vue";
 </script>
 
@@ -11,11 +10,7 @@ import ContactPage from "@/components/ContactPage.vue";
 
   <hr />
 
-  <SkillsPage />
-
-  <hr />
-
-  <ProjectsPage />
+  <SkillsPage :show-resume="false" />
 
   <hr />
 

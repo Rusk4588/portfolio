@@ -50,7 +50,7 @@ const props = defineProps({
         <ul>
           <li>My birthday is on October 31st!</li>
           <li>My favourite colour is #7fe855 green (look at the background!)</li>
-          <li>One more fact!</li>
+          <li>I am interested in game development</li>
         </ul>
       </div>
 
